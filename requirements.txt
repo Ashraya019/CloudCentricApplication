@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pytest
+httpx
+prometheus-client
+sqlalchemy
+psycopg2-binary
+pydantic
+alembic
