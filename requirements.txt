@@ -7,3 +7,6 @@ sqlalchemy
 psycopg2-binary
 pydantic
 alembic
+pytest-cov
+ruff
+pip-audit

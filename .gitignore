@@ -1,5 +1,4 @@
 *.pyd
-.git
 .idea
 
 # Python virtual environment
