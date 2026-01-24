@@ -1,5 +1,6 @@
 *.pyd
 .idea
+coverage.xml
 
 # Python virtual environment
 venv/
