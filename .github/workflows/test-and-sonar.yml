@@ -28,7 +28,7 @@ jobs:
         pytest --cov=app --cov-report=xml
     
     - name: SonarCloud scan
-      uses: SonarSource/sonarcloud-github-action@v2
+      uses: SonarSource/sonarcloud-github-action@master
       with:
         organization: Ashraya019
         projectkey: Ashraya019_CloudCentricApplication
