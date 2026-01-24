@@ -3,7 +3,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from app.db import Base
-from app import models
 
 SQLALCHEMY_TEST_DATABASE_URL = "sqlite+pysqlite:///:memory:"
 
