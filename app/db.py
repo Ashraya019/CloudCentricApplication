@@ -21,7 +21,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 # no hardcoding creds
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://postgres:postgres@db:5432/postgres"
+    "postgresql://postgres:postgres@localhost:5432/postgres"
 )
 
 # create_engine is the starting point for any SQLAlchemy application. It creates an Engine object, which acts as the central "control center" for connecting your Python code to your database.
@@ -36,7 +36,8 @@ engine = create_engine(
     # When your application wants to talk to the database, it grabs a connection from a "pool" (a collection of already-open connections).
     # Without Pre-Ping: Your app assumes the connection is still alive. If the database or network cut that connection while it was sitting idle, your app will crash with a Connection unexpectedly closed error.
     # With Pre-Ping: Every time your app grabs a connection from the pool, it sends a tiny "heartbeat" (usually SELECT 1) to the database first. If the database doesn't answer, SQLAlchemy quietly throws that dead connection away and creates a fresh one for you.
-    pool_pre_ping = True
+    pool_pre_ping = True,
+    future=True
 )
 
 # Explicit commits
