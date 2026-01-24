@@ -1,6 +1,6 @@
 *.pyd
-.git
 .idea
+coverage.xml
 
 # Python virtual environment
 venv/

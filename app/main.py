@@ -1,7 +1,6 @@
 from fastapi import FastAPI #Imports the FastAPI class to create our web application.
 from app.routes import router #Imports the CRUD endpoints (POST /items, GET /items, etc.) from routes.py.
 from app.metrics import metrics_middleware, metrics_endpoint #Imports the Prometheus /metrics endpoint, so your app can be monitored.
-from app.db import engine, Base
 
 # create the fast API, Creates the app instance.
 # title and version are metadata useful in Swagger UI (/docs).
