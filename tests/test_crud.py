@@ -1,3 +1,4 @@
+import pytest
 from app.crud import create_item, get_items
 from app.schemas import ItemCreate
 
@@ -25,5 +26,12 @@ def test_get_items(db_session):
     assert len(items) == 2
     names = [item.name for item in items]
     assert "one" in names
-    assert "two in names"
+    assert "two" in names
+
+def test_create_item_with_none_name(db_session):
+    with pytest.raises(Exception):
+        create_item(
+            db_session,
+            ItemCreate(name=None, description="fail")
+        )
 
